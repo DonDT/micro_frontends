@@ -24,7 +24,7 @@ const devConfig = {
         // the marketing to the left is used to load the right url, where marketing runs
         marketing: "marketing@http://localhost:8081/remoteEntry.js",
       },
-      //shared: ["react", "react-dom"], // avoid duplicate downloads
+      //shared: ["react", "react-dom"], avoid duplicate downloads
       shared: packageJson.dependencies,
     }),
   ],
