@@ -15,7 +15,7 @@ const devConfig = {
   plugins: [
     new ModuleFederationPlugin({
       // this is set up as the host, receing exposed modules
-      name: "container", // name of host not used anywhere
+      name: "container",
       remotes: {
         // the remote files we are receiving
         // the keys are the names of the various modules exposed that we are receiving.
