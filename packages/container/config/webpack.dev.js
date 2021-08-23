@@ -16,7 +16,7 @@ const devConfig = {
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
-        // the remote files we are receiving ////
+        // the remote files we are receiving
         // the keys are the names of the various modules exposed that we are receiving.
         // the values are where the remote entry files are for that value...
         // marketing@http://localhost:8081/remoteEntry.js , marketing is the name
