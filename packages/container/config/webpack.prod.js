@@ -9,6 +9,7 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js", // template for naming files
+    publicPath: "/container/latest/",
   },
   plugins: [
     // production specific setups
