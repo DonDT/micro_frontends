@@ -3,6 +3,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const commonConfig = require("./webpack.common");
 const packageJson = require("../package.json");
 
+// When build is run, this would be accessed from the container build env variable.
 const domain = process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
@@ -15,7 +16,7 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
-        marketing: `marketing@${domain}/marketing/remoteEntry.js`,
+        marketing: `marketing@${domain}/latest/marketing/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),
