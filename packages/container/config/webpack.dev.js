@@ -18,7 +18,7 @@ const devConfig = {
       remotes: {
         // the remote files we are receiving
         // the keys are the names of the various modules exposed that we are receiving.
-        // the values are where the remote entry files are for that value.
+        // the values are where the remote entry files are for that value...
         // marketing@http://localhost:8081/remoteEntry.js , marketing is the name
         // exposed in the marketing webpack config.
         // the marketing to the left is used to load the right url, where marketing runs
