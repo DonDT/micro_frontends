@@ -5,7 +5,6 @@ const packageJson = require("../package.json");
 const commonConfig = require("./webpack.common");
 
 const devConfig = {
-  devtool: "eval-cheap-source-map",
   mode: "development",
   output: {
     publicPath: "http://localhost:8080/",
