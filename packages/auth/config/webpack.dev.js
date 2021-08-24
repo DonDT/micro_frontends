@@ -5,22 +5,23 @@ const packageJson = require("../package.json");
 const commonConfig = require("./webpack.common");
 
 const devConfig = {
+  devtool: "eval-cheap-source-map",
   mode: "development",
   output: {
-    publicPath: "http://localhost:8081/",
+    publicPath: "http://localhost:8082/",
   },
   devServer: {
-    port: 8081,
+    port: 8082,
     historyApiFallback: {
       index: "index.html",
     },
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "marketing", // used to declare some global variable
+      name: "auth", // used to declare some global variable
       filename: "remoteEntry.js",
       exposes: {
-        "./MarketingApp": "./src/bootstrap",
+        "./AuthApp": "./src/bootstrap",
       },
       //shared: ["react", "react-dom"], // avoid duplicate downloads
       shared: packageJson.dependencies,

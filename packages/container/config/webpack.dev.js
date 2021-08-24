@@ -5,7 +5,11 @@ const packageJson = require("../package.json");
 const commonConfig = require("./webpack.common");
 
 const devConfig = {
+  devtool: "eval-cheap-source-map",
   mode: "development",
+  output: {
+    publicPath: "http://localhost:8080/",
+  },
   devServer: {
     port: 8080,
     historyApiFallback: {
@@ -23,6 +27,7 @@ const devConfig = {
         // exposed in the marketing webpack config.
         // the marketing to the left is used to load the right url, where marketing runs
         marketing: "marketing@http://localhost:8081/remoteEntry.js",
+        auth: "auth@http://localhost:8082/remoteEntry.js",
       },
       //shared: ["react", "react-dom"], avoid duplicate downloads
       shared: packageJson.dependencies,
